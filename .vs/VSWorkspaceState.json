@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Damjan",
+    "\\homework1",
+    "\\homework1\\homework1Task2",
+    "\\homework2\\homework2SwapNumbers",
+    "\\SumOfEven"
   ],
-  "SelectedNode": "\\homework1",
+  "SelectedNode": "\\homework1\\homework1Task2\\homework1Task2.csproj",
   "PreviewInSolutionExplorer": false
 }

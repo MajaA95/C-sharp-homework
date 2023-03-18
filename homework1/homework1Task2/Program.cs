@@ -20,5 +20,6 @@ fourthNumber = Convert.ToDouble(Console.ReadLine());
 
 result = (firstNumber + secondNumber + thirdNumber + fourthNumber) / 4;
 Console.WriteLine("The average of numbers is:" + result);
+Console.ReadLine();
 
 

@@ -35,6 +35,7 @@ if(operation == '*')
     result = firstNumber * secondNumber;
     Console.WriteLine(result);
 }
+Console.ReadLine();
 
 
                     
