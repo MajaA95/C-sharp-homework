@@ -1,10 +1,10 @@
 ﻿
 int Main ()
 {
-   
+
     Console.WriteLine("Enter operator");
     char op = Convert.ToChar(Console.ReadLine());
-  
+
     Console.WriteLine("Enter number 1");
     int number1 = Convert.ToInt32(Console.ReadLine());
 
@@ -14,9 +14,9 @@ int Main ()
     int result = 0;
 
     switch (op)
-        
+
     {
-        
+
         case '+':
             result = Sum(number1, number2);
             break;
@@ -30,7 +30,17 @@ int Main ()
             break;
 
         case '/':
-            result = Divide(number1, number2);
+            try
+            {
+                result = Divide(number1, number2);
+            }
+            catch (DivideByZeroException caught) {
+                Console.WriteLine("Exception caught: {0}", caught);
+            }
+            finally
+            {
+                Console.WriteLine("Result: {0}", result);
+            }
             break;
 
         default:
@@ -39,27 +49,28 @@ int Main ()
 
     }
     return result;
-  
-}
+    }
 
-int Sum(int num1, int num2)
-{
-    return num1 + num2;
-}
-int Substract(int num1, int num2)
-{
-    return num1 - num2;
-}
-int Multiply(int num1, int num2)
-{
-    return num1 * num2;
-}
-int Divide(int num1, int num2)
-{
-    return num1 / num2;
-}
+
+    int Sum(int num1, int num2)
+    {
+        return num1 + num2;
+    }
+    int Substract(int num1, int num2)
+    {
+        return num1 - num2;
+    }
+    int Multiply(int num1, int num2)
+    {
+        return num1 * num2;
+    }
+    int Divide(int num1, int num2)
+    {
+        return num1 / num2;
+    }
 
 
 int res = Main();
 Console.WriteLine("The result is: " + res);
+Console.ReadLine();
 
